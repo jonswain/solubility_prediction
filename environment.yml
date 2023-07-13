@@ -1,0 +1,33 @@
+# conda env create --file environment.yml
+# mamba env create --file environment.yml
+name: solubility_model
+dependencies:
+  - datamol=0.9.2
+  - hyperopt
+  - ipykernel
+  - lightgbm
+  - matplotlib
+  - molfeat=0.8.6
+  - numpy=1.21 # Required for scaffold split float error in chemprop
+  - pandas
+  - pyprojroot
+  - python=3.10
+  - rdkit=2022.9.5
+  - scikit-learn=1.2.2
+  - seaborn
+  - shap
+  - tqdm  
+  # Development
+  - black
+  - ipykernel
+  - mypy
+  - ruff
+  - pip
+  - pip:
+    - chemprop
+    - deepchem
+    - dgl
+    - dgllife
+    - git+https://github.com/bp-kelley/descriptastorus
+    - openpyxl
+    - pycaret==3.0.2
